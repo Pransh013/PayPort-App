@@ -1,7 +1,12 @@
+"use client";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { Appbar } from "@repo/ui/appbar";
+
 export default function Page(): JSX.Element {
+  const session = useSession();
   return (
-    <main className="w-full min-h-screen">
-      <h1 className="text-3xl">Hii there</h1>
-    </main>
+    <div>
+      <Appbar onSignin={signIn} onSignout={signOut} user={session.data?.user} />
+    </div>
   );
 }

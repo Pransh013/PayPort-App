@@ -1,5 +1,5 @@
 {
-  "name": "PayPort",
+  "name": "payport",
   "private": true,
   "scripts": {
     "build": "turbo build",
